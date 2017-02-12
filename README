@@ -25,7 +25,22 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  blah blah blah
+  N/A
+
+USAGE
+
+$ perl -Mblib -MVytas -MData::Dumper -e 'print Dumper Vytas::transform_data({"a" => [{ "username" => "bob", "method" => "ssl", "tenant" => "", "logged_in" => "true" }]})'
+$VAR1 = [
+          [
+            'a',
+            '',
+            'bob',
+            'ssl'
+          ]
+        ];
+
+$ perl -Mblib -MVytas -MData::Dumper -e 'print Dumper Vytas::transform_data({"a" => [{ "username" => "bob", "method" => "ssl", "tenant" => "", "logged_in" => "false" }]})'
+$VAR1 = []
 
 COPYRIGHT AND LICENCE
 
